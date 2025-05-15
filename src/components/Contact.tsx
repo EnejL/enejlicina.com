@@ -67,7 +67,7 @@ const Contact = () => {
               Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
             </p>
             
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center p-4 rounded-lg bg-secondary/50">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
@@ -105,7 +105,7 @@ const Contact = () => {
                   <p className="text-muted-foreground">Based in Netherlands</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           
           <div className="glass-card p-8 rounded-lg">
