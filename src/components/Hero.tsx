@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
 
@@ -73,8 +72,8 @@ const Hero = () => {
             <div className="profile-image-container shadow-lg">
               <img
                 ref={profileImageRef}
-                src="https://media.licdn.com/dms/image/v2/C4D03AQEq0p8XHEzxsQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1612975865302?e=1748476800&v=beta&t=hULFXVbGaPxIbp-GC5qPs_jECZZuSzJfioZZRdhiLe0"
-                alt="Enej Ličina"
+                src="/images/enej_photo.jpeg"
+                alt="Enej Licina"
                 className="profile-image w-full max-w-md rounded-lg transition-opacity duration-700 opacity-0"
                 loading="lazy"
               />
@@ -86,24 +85,24 @@ const Hero = () => {
           <h3 className="text-lg font-medium mb-6 text-center">I've worked with</h3>
           <div className="logo-grid">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D4E0BAQFxBa3thamTeA/company-logo_400_400/company-logo_400_400/0/1720486266728/blueconic_logo?e=1748476800&v=beta&t=7oRU9nKPBqIW0RbhHYAY9yC9dJqnRF_Bi4DsFnVhm8s" 
+              src="/images/blueconic_logo.jpeg" 
               alt="BlueConic" 
-              className="company-logo" 
+              className="company-logo h-8 w-auto" 
             />
             <img 
-              src="https://media.licdn.com/dms/image/v2/C4D0BAQFOwALttfZ8rw/company-logo_400_400/company-logo_400_400/0/1630496116169?e=1748476800&v=beta&t=bqXCu-0MoxcUC_5zC9Q2LelpiQf36bNDWd_zsPeETEk" 
-              alt="Proud Nerds" 
-              className="company-logo" 
+              src="/images/proudnerds_logo.jpeg" 
+              alt="Triggre" 
+              className="company-logo h-8 w-auto" 
             />
             <img 
-              src="https://media.licdn.com/dms/image/v2/D4E0BAQFFGC3vrvfy0g/company-logo_400_400/company-logo_400_400/0/1681839272175?e=1748476800&v=beta&t=jabkgfNGMvAlxYDVIC1exUo1TqSBq1T4845_GmW6wwY" 
-              alt="RIFF" 
-              className="company-logo" 
+              src="/images/riff_logo.jpeg" 
+              alt="bol.com" 
+              className="company-logo h-8 w-auto" 
             />
             <img 
-              src="https://media.licdn.com/dms/image/v2/C560BAQHVf15BMnUNQw/company-logo_400_400/company-logo_400_400/0/1630610073435/petrol_logo?e=1748476800&v=beta&t=EMcnWYgppkUbdKWHp5p0wAvURdfBxpRLpKglN9amgSo" 
-              alt="Petrol d.d., Ljubljana" 
-              className="company-logo" 
+              src="/images/petrol_logo.jpeg" 
+              alt="Petrol" 
+              className="company-logo h-8 w-auto" 
             />
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 interface ExperienceItem {
@@ -13,21 +12,21 @@ const experiences: ExperienceItem[] = [
   {
     title: "Software Engineer",
     company: "BlueConic",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQFxBa3thamTeA/company-logo_400_400/company-logo_400_400/0/1720486266728/blueconic_logo?e=1748476800&v=beta&t=7oRU9nKPBqIW0RbhHYAY9yC9dJqnRF_Bi4DsFnVhm8s",
+    logo: "/images/blueconic_logo.jpeg",
     period: "July 2021 - Present",
     description: "Working on frontend development for the BlueConic platform, a customer data platform that helps companies optimize their customer lifecycle."
   },
   {
     title: "Frontend Engineer",
     company: "Proud Nerds",
-    logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFOwALttfZ8rw/company-logo_400_400/company-logo_400_400/0/1630496116169?e=1748476800&v=beta&t=bqXCu-0MoxcUC_5zC9Q2LelpiQf36bNDWd_zsPeETEk",
+    logo: "/images/proudnerds_logo.jpeg",
     period: "June 2019 - June 2021",
     description: "Developed responsive web applications and user interfaces using modern frontend technologies. Collaborated with UX designers to implement pixel-perfect designs."
   },
   {
     title: "Frontend Engineer",
     company: "RIFF",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQFFGC3vrvfy0g/company-logo_400_400/company-logo_400_400/0/1681839272175?e=1748476800&v=beta&t=jabkgfNGMvAlxYDVIC1exUo1TqSBq1T4845_GmW6wwY",
+    logo: "/images/riff_logo.jpeg",
     period: "January 2018 - June 2019",
     description: "Created modern web interfaces and implemented responsive designs for client projects. Worked with various JavaScript frameworks and libraries."
   },
@@ -40,7 +39,7 @@ const experiences: ExperienceItem[] = [
   {
     title: "Web Editor",
     company: "Petrol d.d., Ljubljana",
-    logo: "https://media.licdn.com/dms/image/v2/C560BAQHVf15BMnUNQw/company-logo_400_400/company-logo_400_400/0/1630610073435/petrol_logo?e=1748476800&v=beta&t=EMcnWYgppkUbdKWHp5p0wAvURdfBxpRLpKglN9amgSo",
+    logo: "/images/petrol_logo.jpeg",
     period: "September 2016 - April 2017",
     description: "Managed web content and worked on small web development projects. Collaborated with the marketing team to ensure consistent messaging across digital platforms."
   }
