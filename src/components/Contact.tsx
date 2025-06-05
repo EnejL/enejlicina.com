@@ -1,9 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [result, setResult] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,10 +36,17 @@ const Contact = () => {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    
+    if (!recaptchaToken) {
+      setResult("Please complete the reCAPTCHA verification");
+      return;
+    }
+
     setResult("Sending....");
     const formData = new FormData(event.currentTarget);
 
     formData.append("access_key", "8a35e7aa-1380-44a1-b198-822efe334832");
+    formData.append("recaptcha_token", recaptchaToken);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -49,6 +59,8 @@ const Contact = () => {
       if (response.status === 200) {
         setResult("Thank you for your message! I'll get back to you soon.");
         event.currentTarget.reset();
+        recaptchaRef.current?.reset();
+        setRecaptchaToken(null);
       } else {
         console.log("Error", data);
         setResult(data.message || "Something went wrong. Please try again.");
@@ -57,7 +69,13 @@ const Contact = () => {
       console.error("Submission error:", error);
       setResult("Thank you for your message! I'll get back to you soon.");
       event.currentTarget.reset();
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     }
+  };
+
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
   };
 
   return (
@@ -117,6 +135,14 @@ const Contact = () => {
                   rows={4}
                   className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-none"
                   placeholder="I'd like to discuss a project..."
+                />
+              </div>
+
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LeZylYrAAAAAPD80gtiejFHdbvHK3hlWHMI8MLB"
+                  onChange={handleRecaptchaChange}
                 />
               </div>
               
